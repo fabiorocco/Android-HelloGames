@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewType"
+            app:layout_constraintStart_toEndOf="@+id/textViewTypeLabel" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName"/>
+    <TextView
+            android:text="@string/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNbPlayers"
+            app:layout_constraintStart_toEndOf="@+id/textViewLabel"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textViewType"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="@string/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="90dp"
+            android:id="@+id/textViewName" app:layout_constraintStart_toEndOf="@+id/textViewNameLabel"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="@string/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewYear"
+            app:layout_constraintStart_toEndOf="@+id/TextViewYearLabel"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNbPlayers"/>
+    <TextView
+            android:text="@string/nb_players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLabel" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTypeLabel" android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"/>
+    <TextView
+            android:text="@string/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextViewYearLabel" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLabel" android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"/>
+    <TextView
+            android:text="@string/gameinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="16dp"
+            android:id="@+id/textViewGameInfo"
+            android:textColor="@android:color/holo_blue_bright" android:textSize="24sp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
+    <TextView
+            android:text="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="90dp"
+            android:id="@+id/textViewNameLabel" android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTypeLabel" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNameLabel" android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDescription"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYear"/>
+    <Button
+            android:text="@string/do_you_want_to_know_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGameInfo"/>
+</android.support.constraint.ConstraintLayout>

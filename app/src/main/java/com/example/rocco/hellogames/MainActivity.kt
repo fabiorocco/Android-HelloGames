@@ -24,8 +24,6 @@ class MainActivity : AppCompatActivity() {
         .addConverterFactory(jsonConverter)
         .build()
 
-    val explicitIntent = Intent(activity, DescriptionActivity::class.java)
-
     val service: WebServiceInterface = retrofit.create(WebServiceInterface::class.java)
     val callback = object : Callback<List<Games>> {
         override fun onFailure(call: Call<List<Games>>?, t: Throwable?) {
@@ -48,7 +46,27 @@ class MainActivity : AppCompatActivity() {
                         textViewBotRight.text = gamesList[3].name
 
                         textViewTopLeft.setOnClickListener {
-                            gamesList[0].id
+                            val explicitIntent = Intent(this@MainActivity, DescriptionActivity::class.java)
+                            explicitIntent.putExtra("gameId", gamesList[0].id)
+                            startActivity(explicitIntent)
+                        }
+
+                        textViewTopRight.setOnClickListener {
+                            val explicitIntent = Intent(this@MainActivity, DescriptionActivity::class.java)
+                            explicitIntent.putExtra("gameId", gamesList[1].id)
+                            startActivity(explicitIntent)
+                        }
+
+                        textViewBotLeft.setOnClickListener {
+                            val explicitIntent = Intent(this@MainActivity, DescriptionActivity::class.java)
+                            explicitIntent.putExtra("gameId", gamesList[2].id)
+                            startActivity(explicitIntent)
+                        }
+
+                        textViewBotRight.setOnClickListener {
+                            val explicitIntent = Intent(this@MainActivity, DescriptionActivity::class.java)
+                            explicitIntent.putExtra("gameId", gamesList[3].id)
+                            startActivity(explicitIntent)
                         }
                     }
                 }
@@ -61,6 +79,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         service.ListGames().enqueue(callback)
-
     }
 }

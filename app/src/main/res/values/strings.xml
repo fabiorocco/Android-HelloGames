@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Hello Games</string>
+    <string name="gameinfo">GameInfo</string>
+    <string name="textview">TextView</string>
+    <string name="nb_players">Nb Players</string>
+    <string name="year">Year</string>
+    <string name="name">Name</string>
+    <string name="do_you_want_to_know_more">Do you want to know more ?</string>
 </resources>
